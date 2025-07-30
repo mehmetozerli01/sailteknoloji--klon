@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kayıt Ol - Sail Teknoloji</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      background: #f5f7fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .register-container {
+      background: #fff;
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(26,35,126,0.10);
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+    .register-container h2 {
+      margin-bottom: 24px;
+      color: #1a237e;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    .register-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    .register-container button {
+      width: 100%;
+      background: #1a237e;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .register-container button:hover {
+      background: #ff9800;
+    }
+    .register-container .login-link {
+      display: block;
+      margin-top: 18px;
+      color: #1a237e;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .register-container .login-link:hover {
+      text-decoration: underline;
+      color: #ff9800;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>Kayıt Ol</h2>
+    <form>
+      <input type="text" placeholder="Ad Soyad" required />
+      <input type="email" placeholder="E-posta" required />
+      <input type="password" placeholder="Şifre" required />
+      <input type="password" placeholder="Şifre Tekrar" required />
+      <button type="submit">Kayıt Ol</button>
+    </form>
+    <a class="login-link" href="login.html">Zaten hesabınız var mı? Giriş Yapın</a>
+  </div>
+  <script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Kayıt başarılı! (Simülasyon)");
+      // Burada gerçek kayıt işlemini başlatabilirsin
+    });
+  </script>
+</body>
+</html>

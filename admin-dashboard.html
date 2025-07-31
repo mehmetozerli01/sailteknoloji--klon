@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli -  Sail Teknoloji </title>
+    <link rel="stylesheet"href="style.css">
+    <style>
+
+        body {
+            margin:0;
+            font-family:'Segoe',sans-serif ;
+            background-color:#f4f6f8 ;
+
+        }
+        .admin- header {
+            background-color:#004080 ;
+            color: aquamarine;
+            padding:20px ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .admin-header h1 {
+            margin: 0;
+            font-size:24px ;
+
+        }
+
+        .admin-sidebar {
+            width: 220px;
+            background-color:#002f5c ;
+            color: white;
+            position: fixed;
+            top:70px ;
+            bottom:0 ;
+            padding-top:20px ;
+        }
+
+        .admin-sidebar a {
+            display: block;
+            color: blueviolet;
+            text-decoration: none;
+            padding:12px 20px ;
+             border-bottom: 1px solid rgba(255,255,255,0.1);
+  
+        }
+
+        .admin-sidebar a:hover {
+            background-color:#003f7f ;
+
+        }
+
+        .admin-content {
+            margin-left:240px ;
+            padding:30px ;
+        }
+
+        .card {
+            background-color: white;
+            border-radius:12px ;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding:20px ;
+            margin-bottom:20px ;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap:20px ;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+
+   </style>      
+
+</head>
+<body>
+
+    <header class="admin-header">
+        <h1>Admin Paneli - Sail Teknoloji</h1>
+        <a href="index.html" style="color:white;text-decoration:none;">Çıkış Yap</a>
+    </header>
+
+    <aside class="admin-sidebar">
+        <a href="#">Dashborard</a>
+        <a href="">Hizmet Yönetimi</a>
+        <a href="">Ürünler</a>
+        <a href="">Kullanıcılar</a>
+        <a href="">Gelen Mesajlar</a>
+        <a href="">Blog/Duyurular</a>
+
+</aside>
+
+
+<main class="admin-content">
+    <h2>Yönetim Özeti</h2>
+    <div class="dashboard-grid">
+        <div class="card">
+            <h3>Toplam Kullanıcı</h3>
+            <p>489</p>
+        </div>
+        <h3>Ürün Sayısı </h3>
+        <p>48</p>
+    </div>
+    <div class="card">
+        <h3>Aktif Hizmetler </h3>
+        <p>7</p>
+    </div>
+    <div class="card">
+        <h3>Gelen Mesajlar</h3>
+        <p>17</p>
+    </div>
+</div>
+</main>
+</body>
+</html>

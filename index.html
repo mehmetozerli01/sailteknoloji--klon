@@ -22,7 +22,7 @@
         <a href="#anasayfa">Ana Sayfa</a>
         <a href="hakkımızda.html">Hakkımızda</a>
         <a href="#hizmetler">Hizmetler</a>
-        <a href="#iletisim">İletişim</a>
+        <a href="iletişim.html">İletişim</a>
         <a href="ürünler.html">Ürünler</a>
       </nav>
       <div class="lanquage-switcher">
@@ -244,22 +244,7 @@
 
 
   <!-- İletişim -->
-  <section id="iletisim" class="contact">
-    <div class="contact-container">
-      <h2>İletişim</h2>
-      <div class="contact-info">
-        <p>📍 Adres: Adana, Türkiye</p>
-        <p>📞 Telefon: 0123 456 7890</p>
-        <p>📧 E-posta: info@sailteknoloji.com</p>
-      </div>
-      <form id ="contactForm" class="contact-form fade-in">
-        <input type="text" placeholder="Adınız" required />
-        <input type="email" placeholder="E-posta" required />
-        <textarea placeholder="Mesajınız" rows="5" required></textarea>
-        <button type="submit">Gönder</button>
-      </form>
-    </div>
-  </section>
+ 
 
 
   <section class="offices">
@@ -349,7 +334,6 @@
 
 
   
-
 
 
 <script>
@@ -455,45 +439,79 @@ document.addEventListener('DOMContentLoaded', () => {
     .replaceAll('ı','i').replaceAll('ö','o')
     .replaceAll('ş','s').replaceAll('ü','u');
 
-  
   const intents = [
-    {
-      keys: ['merhaba','selam','hello','hi'],
-      reply: 'Merhaba! Size nasıl yardımcı olabilirim? (Örn: emülatör, dtc, nox, fiyat, teslimat, garanti)'
-    },
-    {
-      keys: ['fiyat','ucret','price'],
-      reply: 'Fiyatlar ürün ve araca göre değişir. Hangi kategoriyle ilgileniyorsunuz? (Emülatörler / DTC Temizleyiciler / NOx Sistemleri)'
-    },
-    
-    {
-      keys: ['emulator','emülatör','adblue','scr','euro6','euro 6'],
-      reply: 'Yeni nesil Euro 6 motorlar için AdBlue/SCR emülatör çözümleri sunuyoruz. Uygunluk için marka–model ve yıl bilgisini paylaşabilir misiniz?'
-    },
-    {
-      keys: ['man','daf','scania','volvo','renault trucks','iveco','mercedes'],
-      reply: 'Bu markalar için uyumlu emülatör seçeneklerimiz mevcut. Araç model/yıl ve motor tipine göre öneri yapabilirim.'
-    },
-    
-    {
-      keys: ['dtc','ariza','arıza','hata kodu','fault','ecu reset','kod sil'],
-      reply: 'DTC Temizleyici: ECU üzerindeki arıza kodlarını temizlemeye ve uyarıları sıfırlamaya yardımcıdır. Hangi araçta kullanacaksınız?'
-    },
-    
-    {
-      keys: ['nox','nox sensor','sensör','sensor'],
-      reply: 'NOx sistem çözümlerimiz Euro 5/6 ve bazı USA versiyonlarında çalışır. Marka–model paylaşın, en uygun çözümü önereyim.'
-    },
-    
-    {
-      keys: ['kargo','teslimat','shipping','kac gunde','kaç günde'],
-      reply: 'Siparişler genellikle 1–3 iş günü içinde kargoya verilir. Takip bilgisi e-posta ile iletilir.'
-    },
-    {
-      keys: ['garanti','iade','destek','teknik destek','support'],
-      reply: 'Ürünlerimiz garanti ve teknik destek kapsamındadır. Destek için İletişim bölümünden yazabilir veya bizi arayabilirsiniz.'
-    }
-  ];
+  {
+    keys: ['merhaba','selam','hello','hi'],
+    reply: 'Merhaba! Size nasıl yardımcı olabilirim? (Örn: emülatör, dtc, nox, fiyat, teslimat, garanti)'
+  },
+  {
+    keys: ['fiyat','ucret','price'],
+    reply: 'Fiyatlar ürün ve araca göre değişir. Hangi kategoriyle ilgileniyorsunuz? (Emülatörler / DTC Temizleyiciler / NOx Sistemleri)'
+  },
+  {
+    keys: ['emulator','emülatör','adblue','scr','euro6','euro 6'],
+    reply: 'Yeni nesil Euro 6 motorlar için AdBlue/SCR emülatör çözümleri sunuyoruz. Uygunluk için marka–model ve yıl bilgisini paylaşabilir misiniz?'
+  },
+  {
+    keys: ['man','daf','scania','volvo','renault trucks','iveco','mercedes'],
+    reply: 'Bu markalar için uyumlu emülatör seçeneklerimiz mevcut. Araç model/yıl ve motor tipine göre öneri yapabilirim.'
+  },
+  {
+    keys: ['dtc','ariza','arıza','hata kodu','fault','ecu reset','kod sil'],
+    reply: 'DTC Temizleyici: ECU üzerindeki arıza kodlarını temizlemeye ve uyarıları sıfırlamaya yardımcıdır. Hangi araçta kullanacaksınız?'
+  },
+  {
+    keys: ['nox','nox sensor','sensör','sensor'],
+    reply: 'NOx sistem çözümlerimiz Euro 5/6 ve bazı USA versiyonlarında çalışır. Marka–model paylaşın, en uygun çözümü önereyim.'
+  },
+  {
+    keys: ['kargo','teslimat','shipping','kac gunde','kaç günde'],
+    reply: 'Siparişler genellikle 1–3 iş günü içinde kargoya verilir. Takip bilgisi e-posta ile iletilir.'
+  },
+  {
+    keys: ['garanti','iade','destek','teknik destek','support'],
+    reply: 'Ürünlerimiz garanti ve teknik destek kapsamındadır. Destek için İletişim bölümünden yazabilir veya bizi arayabilirsiniz.'
+  },
+  {
+    keys: ['bayi','dealer','satıcı','satış noktası','bayiler'],
+    reply: 'Bayilerimiz Türkiye ve yurtdışında mevcuttur. Size en yakın bayiyi öğrenmek için bulunduğunuz şehir veya ülkeyi belirtin.'
+  },
+  {
+    keys: ['ödeme','payment','kredi kartı','havale','banka'],
+    reply: 'Ödeme seçenekleri: Havale/EFT ve kredi kartı ile mümkündür. Yurtdışı ödemeler için banka swift bilgileri sağlanır.'
+  },
+  {
+    keys: ['kurulum','montaj','installation','takma','nasıl bağlanır'],
+    reply: 'Emülatörler genellikle plug & play’dir. Bazı araçlarda profesyonel montaj önerilir. İsterseniz teknik döküman gönderebilirim.'
+  },
+  {
+    keys: ['uyum','compatible','çalışır mı','uygun mu','araç uyumu'],
+    reply: 'Ürünler marka–model–motor tipine göre değişir. Araç bilgilerinizi paylaşın, uyumlu çözümleri kontrol edelim.'
+  },
+  {
+    keys: ['stok','mevcut','var mı','stokta','hazır'],
+    reply: 'Çoğu ürünümüz stoktan hızlı gönderimlidir. Hangi ürün/kategori ile ilgileniyorsunuz?'
+  },
+  {
+    keys: ['demo','deneme','test','sample'],
+    reply: 'Test amaçlı demo cihazlarımız mevcut değildir. Ancak teknik bilgi, döküman ve referans videolar paylaşabiliriz.'
+  },
+  {
+    keys: ['iletişim','telefon','whatsapp','email','adres'],
+    reply: 'Bize WhatsApp, telefon veya e-posta üzerinden ulaşabilirsiniz. İletişim bilgileri web sitemizin İletişim bölümünde yer alıyor.'
+  }
+];
+
+  
+
+
+
+  
+
+
+
+
+  
 
   function findReply(message) {
     const m = normalize(message);
